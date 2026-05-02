@@ -60,7 +60,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="glass p-8 rounded-2xl"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium mb-2 text-slate-300">Name</label>
