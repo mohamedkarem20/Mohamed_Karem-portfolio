@@ -1,23 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Camera } from 'lucide-react';
 
 const About = () => {
-  const [image, setImage] = useState(localStorage.getItem('aboutImage') || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000');
-  const fileInputRef = useRef(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result;
-        setImage(base64String);
-        localStorage.setItem('aboutImage', base64String);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  const image = './Gemini_Generated_Image_km275wkm275wkm27.png';
 
   return (
     <section id="about" className="section-padding bg-navy">
@@ -39,21 +24,7 @@ const About = () => {
                   className="w-full h-full object-cover object-top grayscale brightness-90 contrast-125 hover:grayscale-0 transition-all duration-700"
                 />
 
-                {/* Change Image Overlay */}
-                <div
-                  onClick={() => fileInputRef.current.click()}
-                  className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                >
-                  <Camera size={40} className="text-white mb-2" />
-                  <span className="text-white text-sm font-bold uppercase tracking-wider">Change Photo</span>
-                </div>
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={handleImageChange}
-                  className="hidden"
-                  accept="image/*"
-                />
+
               </div>
             </div>
           </motion.div>

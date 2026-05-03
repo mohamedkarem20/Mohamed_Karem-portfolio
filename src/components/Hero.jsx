@@ -1,24 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { Linkedin, Github, Mail, Download, Camera } from 'lucide-react';
+import { Linkedin, Github, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
-  const [image, setImage] = useState(localStorage.getItem('heroImage') || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000');
-  const fileInputRef = useRef(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result;
-        setImage(base64String);
-        localStorage.setItem('heroImage', base64String);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  const image = './Gemini_Generated_Image_20jz6f20jz6f20jz (1).png';
 
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32">
@@ -95,21 +81,7 @@ const Hero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent opacity-60"></div>
 
-              {/* Change Image Overlay */}
-              <div
-                onClick={() => fileInputRef.current.click()}
-                className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-              >
-                <Camera size={40} className="text-white mb-2" />
-                <span className="text-white text-sm font-bold uppercase tracking-wider">Change Photo</span>
-              </div>
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleImageChange}
-                className="hidden"
-                accept="image/*"
-              />
+
             </div>
 
             {/* Animated Floating Badges */}
