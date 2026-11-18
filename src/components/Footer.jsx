@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Github, Mail, ArrowUp } from 'lucide-react';
+import { Linkedin, Github, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,18 +13,15 @@ const Footer = () => {
           <a href="#home" className="text-2xl font-bold font-poppins text-primary">
             MK<span className="text-white">.</span>
           </a>
-          <p className="text-sm text-slate-500 mt-2">© 2024 Mohamed Karim Mahmoud. All rights reserved.</p>
+          <p className="text-sm text-slate-500 mt-2">© 2026 Mohamed Karem. All rights reserved.</p>
         </div>
 
         <div className="flex space-x-6">
-          <a href="https://www.linkedin.com/in/mohamed-karem-mahmoud" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/m-karem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-400 hover:text-primary transition-colors">
             <Linkedin size={20} />
           </a>
-          <a href="https://github.com/mohamedkarem20/portfolio" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+          <a href="https://github.com/mohamedkarem20" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-400 hover:text-primary transition-colors">
             <Github size={20} />
-          </a>
-          <a href="mailto:mohamed.karim@example.com" className="text-slate-400 hover:text-primary transition-colors">
-            <Mail size={20} />
           </a>
         </div>
 

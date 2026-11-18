@@ -52,7 +52,7 @@ const ChatBot = () => {
       
       // Auto-open CV if requested
       if (text.includes('cv') || text.includes('سيرة ذاتية') || text.includes('resume')) {
-        window.open('./Mohamed Karem CV.pdf', '_blank');
+        window.open('/Mohamed%20Karem%20CV.pdf', '_blank');
       }
 
       const botMessage = {
@@ -76,32 +76,32 @@ const ChatBot = () => {
 
     // Skills
     if (text.includes('skill') || text.includes('مهارات') || text.includes('تعرف') || text.includes('برمجة') || text.includes('tools') || text.includes('بتعرف تعمل ايه')) {
-      return "Mohamed specializes in Data Analysis and AI. His main tools are Python, SQL, Excel, and Machine Learning (Scikit-Learn, Pandas). \n\n يتخصص محمد في تحليل البيانات والذكاء الاصطناعي. أدواته الأساسية هي بايثون، SQL، إكسيل، وتعلم الآلة.";
+      return "Mohamed works across Applied AI and Data Analytics. His skills include Python, SQL/T-SQL, Power BI, Excel, Tableau, machine learning, deep learning, generative AI, RAG/LLM applications, computer vision, NLP, SQL Server, data visualization, and data mining.\n\nيعمل محمد في الذكاء الاصطناعي التطبيقي وتحليلات البيانات. تشمل مهاراته بايثون وSQL وPower BI وExcel وTableau وتعلم الآلة والتعلم العميق والذكاء الاصطناعي التوليدي وتطبيقات RAG وLLM ورؤية الحاسوب ومعالجة اللغة الطبيعية.";
     }
 
     // Experience & Work
     if (text.includes('experience') || text.includes('خبرة') || text.includes('عمل') || text.includes('وظيفة') || text.includes('career') || text.includes('اشتغلت فين') || text.includes('تاريخك المهني')) {
-      return "Mohamed has over 5 years of professional experience. He started as a Financial Accountant and has transitioned into Data Analytics and Applied AI. \n\n يمتلك محمد خبرة مهنية تزيد عن 5 سنوات. بدأ كمحاسب مالي وانتقل إلى مجال تحليل البيانات والذكاء الاصطناعي التطبيقي.";
+      return "Mohamed's experience includes Data Analyst, Financial Analyst, and Applied AI roles at Hyperone, followed by an Automation Specialist internship at MCIT. See the Experience section for dates and details.\n\nتشمل خبرة محمد العمل كمحلل بيانات ومحلل مالي ومتخصص ذكاء اصطناعي تطبيقي في Hyperone، ثم تدريبًا كمتخصص أتمتة في وزارة الاتصالات وتكنولوجيا المعلومات. راجع قسم الخبرة للتواريخ والتفاصيل.";
     }
 
     // Projects
     if (text.includes('project') || text.includes('مشروع') || text.includes('اعمال') || text.includes('portfolio') || text.includes('انجزت') || text.includes('مشاريعك')) {
-      return "Mohamed has completed over 25 projects in data analysis and financial accounting. You can find detailed case studies in the Projects section above! \n\n أنجز محمد أكثر من 25 مشروعاً في تحليل البيانات والمحاسبة المالية. يمكنك العثور على دراسات حالة مفصلة في قسم المشاريع أعلاه!";
+      return "Featured projects include ADPilot (multi-agent marketing AI), RAGify (RAG for documents and spreadsheets), Keeper-AI (customer churn prediction), Body Performance ML, a Hospital Management System, and Bank Loan Performance Analysis.\n\nتشمل المشاريع: ADPilot لأتمتة التسويق بالذكاء الاصطناعي متعدد الوكلاء، وRAGify للبحث في المستندات والجداول، وKeeper-AI للتنبؤ بتسرب العملاء، وتحليل الأداء البدني، ونظام إدارة المستشفيات، وتحليل أداء القروض البنكية.";
     }
 
     // Education
     if (text.includes('education') || text.includes('دراسة') || text.includes('جامعة') || text.includes('university') || text.includes('تخرج') || text.includes('درست ايه') || text.includes('تعليمك')) {
-      return "Mohamed holds a Bachelor of Commerce (English Section) from South Valley University (2019-2023) and is self-trained in Advanced AI and Data Science. \n\n محمد حاصل على بكالوريوس التجارة (قسم إنجليزي) من جامعة جنوب الوادي (2019-2023) وهو مدرب ذاتياً في الذكاء الاصطناعي المتقدم وعلوم البيانات.";
+      return "Mohamed holds a Bachelor of Commerce (English Section), with a focus on Accounting, Statistics, and Business Analysis. He also completed the AI, Machine Learning & Data Analytics Track at Digilians (Dec 2025 - Sep 2026).\n\nمحمد حاصل على بكالوريوس التجارة (قسم اللغة الإنجليزية)، مع التركيز على المحاسبة والإحصاء وتحليل الأعمال. كما أكمل مسار الذكاء الاصطناعي وتعلم الآلة وتحليلات البيانات في Digilians من ديسمبر 2025 إلى سبتمبر 2026.";
     }
 
     // CV
     if (text.includes('cv') || text.includes('سيرة ذاتية') || text.includes('resume')) {
-      return "You can view Mohamed's full CV here: [Open CV](./Mohamed Karem CV.pdf) \n\n يمكنك عرض السيرة الذاتية الكاملة لمحمد من هنا: [فتح السيرة الذاتية](./Mohamed Karem CV.pdf)";
+      return "You can view Mohamed's latest CV here: [Open CV](/Mohamed%20Karem%20CV.pdf)\n\nيمكنك الاطلاع على أحدث سيرة ذاتية لمحمد هنا: [فتح السيرة الذاتية](/Mohamed%20Karem%20CV.pdf)";
     }
 
     // Contact
     if (text.includes('contact') || text.includes('تواصل') || text.includes('رقم') || text.includes('ايميل') || text.includes('هاتف') || text.includes('email') || text.includes('phone') || text.includes('أكلمك ازاي')) {
-      return "You can reach Mohamed at +20 114 172 2256 or via email at mohamed.karim@example.com. \n\nCheck out his work on GitHub: [github.com/mohamedkarem20/portfolio](https://github.com/mohamedkarem20/portfolio) \n\n يمكنك التواصل مع محمد على الرقم 2256 172 114 20+ أو عبر البريد الإلكتروني. كما يمكنك متابعة أعماله على GitHub عبر الرابط أعلاه!";
+      return "Connect with Mohamed on LinkedIn: https://www.linkedin.com/in/m-karem or explore his projects on GitHub: https://github.com/mohamedkarem20.\n\nيمكنك التواصل مع محمد عبر LinkedIn أو الاطلاع على مشاريعه على GitHub.";
     }
 
     // Greetings

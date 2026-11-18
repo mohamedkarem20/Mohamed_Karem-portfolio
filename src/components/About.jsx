@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const image = './Gemini_Generated_Image_km275wkm275wkm27.png';
+  const image = '/about-portrait.png';
 
   return (
     <section id="about" className="section-padding bg-navy">
@@ -20,7 +20,7 @@ const About = () => {
               <div className="relative glass rounded-xl overflow-hidden aspect-[4/5]">
                 <img
                   src={image}
-                  alt="Mohamed Karim Mahmoud"
+                  alt="Mohamed Karem"
                   className="w-full h-full object-cover object-top grayscale brightness-90 contrast-125 hover:grayscale-0 transition-all duration-700"
                 />
 
@@ -39,56 +39,42 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-6 tracking-tight">Who <span className="text-primary">Am I</span></h2>
             <div className="space-y-6 text-slate-400 leading-relaxed">
               <p className="text-lg">
-                I am an <span className="text-slate-100 font-semibold">Applied AI and Data Analysis enthusiast</span> with a strong interest in turning data into meaningful insights.
-                I enjoy working with data, exploring patterns, and building intelligent solutions using modern tools and techniques.
+                I am an <span className="text-slate-100 font-semibold">Applied AI and Data Analytics professional</span> with hands-on experience in machine learning, generative AI, RAG, and data analytics. I use Python, SQL, and Power BI to build practical solutions and support data-driven decisions.
               </p>
 
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    I Can Analyze and Solve Problems
+                    Applied AI & Machine Learning
                   </h3>
                   <p className="text-sm md:text-base mt-1">
-                    I have experience working with data analysis tools and techniques such as Python, Excel, and data visualization.
-                    I focus on understanding data and using it to support decision-making.
+                    I work with Python, machine learning, deep learning, computer vision, and NLP to develop and evaluate AI solutions.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    I Can Work with AI Technologies
+                    Generative AI & RAG
                   </h3>
                   <p className="text-sm md:text-base mt-1">
-                    I am continuously learning and applying concepts in machine learning and artificial intelligence.
-                    I aim to build smart systems that can automate tasks and provide accurate predictions.
+                    I build LLM and RAG applications that help users explore documents and spreadsheets through natural-language questions.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    I Follow Modern Tech Trends
+                    Analytics & Business Insights
                   </h3>
                   <p className="text-sm md:text-base mt-1">
-                    I stay updated with the latest trends in AI, data science, and technology.
-                    I am always eager to learn new skills and improve my knowledge in this fast-growing field.
+                    I use SQL, Power BI, Excel, and Tableau to analyze data, track KPIs, and make business performance easier to understand.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              <div className="glass p-4 rounded-lg border border-white/5">
-                <h3 className="text-2xl font-bold text-primary">5+</h3>
-                <p className="text-xs text-slate-500 uppercase tracking-widest">Years Exp.</p>
-              </div>
-              <div className="glass p-4 rounded-lg border border-white/5">
-                <h3 className="text-2xl font-bold text-primary">25+</h3>
-                <p className="text-xs text-slate-500 uppercase tracking-widest">Projects Done</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

@@ -1,10 +1,76 @@
 import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-import { motion } from 'framer-motion';
-import { Linkedin, Github, Mail, Download } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Linkedin, Github, Download } from 'lucide-react';
+
+const jobTitles = [
+  'Financial Data Analyst',
+  'Applied AI Specialist',
+  'Automation Specialist',
+  'Machine Learning Specialist',
+];
 
 const Hero = () => {
-  const image = './Gemini_Generated_Image_20jz6f20jz6f20jz (1).png';
+  const image = '/mohamed-about.png';
+  const prefersReducedMotion = useReducedMotion();
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [displayedTitle, setDisplayedTitle] = useState(jobTitles[0]);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    if (!prefersReducedMotion) {
+      return;
+    }
+
+    if (displayedTitle !== jobTitles[titleIndex]) {
+      setDisplayedTitle(jobTitles[titleIndex]);
+    }
+    if (isDeleting) {
+      setIsDeleting(false);
+    }
+  }, [displayedTitle, isDeleting, prefersReducedMotion, titleIndex]);
+
+  useEffect(() => {
+    if (!prefersReducedMotion) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      setTitleIndex((currentIndex) => (currentIndex + 1) % jobTitles.length);
+    }, 3200);
+
+    return () => clearInterval(intervalId);
+  }, [prefersReducedMotion]);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const currentTitle = jobTitles[titleIndex];
+    let timeoutId;
+
+    if (isDeleting) {
+      if (displayedTitle.length > 0) {
+        timeoutId = setTimeout(() => {
+          setDisplayedTitle(displayedTitle.slice(0, -1));
+        }, 35);
+      } else {
+        timeoutId = setTimeout(() => {
+          setIsDeleting(false);
+          setTitleIndex((currentIndex) => (currentIndex + 1) % jobTitles.length);
+        }, 250);
+      }
+    } else if (displayedTitle.length < currentTitle.length) {
+      timeoutId = setTimeout(() => {
+        setDisplayedTitle(currentTitle.slice(0, displayedTitle.length + 1));
+      }, 55);
+    } else {
+      timeoutId = setTimeout(() => setIsDeleting(true), 2200);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [displayedTitle, isDeleting, prefersReducedMotion, titleIndex]);
 
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32">
@@ -18,23 +84,17 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
             Hi, I'm <span className="text-primary">Mohamed Karem</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-medium mb-6 text-slate-100">
-            a{' '}
-            <span className="text-primary border-r-2 border-primary">
-              <Typewriter
-                words={['Data Analyst', 'AI Enthusiast', 'Financial Accountant']}
-                loop={0}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={2000}
-              />
+          <h2 className="text-2xl md:text-3xl font-medium mb-6 leading-tight text-slate-100">
+            <span className="block">a</span>
+            <span className="block min-h-[2.4em] max-w-full">
+              <span className="hero-title-cursor inline-block max-w-full text-primary" aria-live="off">
+                {displayedTitle}
+              </span>
             </span>
           </h2>
           <p className="text-lg text-slate-400 mb-8 max-w-lg">
-            I turn data into insights and build intelligent solutions to solve real-world problems.
-            Bridging the gap between financial expertise and advanced analytics.
+            I build practical AI and analytics solutions with Python, SQL, and Power BI,
+            turning data into insights that support better decisions.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-10">
@@ -50,14 +110,14 @@ const Hero = () => {
           </div>
 
           <div className="flex space-x-6">
-            <a href="https://www.linkedin.com/in/mohamed-karem-mahmoud" target="_blank" rel="noopener noreferrer" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
+            <a href="https://www.linkedin.com/in/m-karem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
               <Linkedin size={20} />
             </a>
-            <a href="https://github.com/mohamedkarem20/portfolio" target="_blank" rel="noopener noreferrer" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
+            <a href="https://github.com/mohamedkarem20" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
               <Github size={20} />
             </a>
-            <a href="mailto:mohamed.karim@example.com" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
-              <Mail size={20} />
+            <a href="https://www.linkedin.com/in/m-karem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 glass rounded-full hover:text-primary transition-all duration-300 hover:scale-110">
+              <Linkedin size={20} />
             </a>
           </div>
         </motion.div>

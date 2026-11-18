@@ -5,25 +5,46 @@ import { GraduationCap, Briefcase, Calendar } from 'lucide-react';
 const Education = () => {
   const items = [
     {
+      type: 'work',
+      title: 'Automation Specialist Intern',
+      institution: 'Ministry of Communications and Information Technology (MCIT)',
+      date: 'Sep 2026 - Nov 2026',
+      desc: 'Trained in automation and workflow optimization; developed solutions to streamline repetitive processes and improve operational efficiency.'
+    },
+    {
       type: 'edu',
-      title: 'Bachelor of Commerce (English Section)',
-      institution: 'South Valley University',
-      date: '2019 - 2023',
-      desc: 'Specialized in Accounting. Developed strong foundational knowledge in financial management, auditing, and corporate accounting.'
+      title: 'AI, Machine Learning & Data Analytics Track',
+      institution: 'Digilians',
+      date: 'Dec 2025 - Sep 2026',
+      desc: 'Training in AI, machine and deep learning applications, plus analytics and visualization with Power BI, Python, and SQL.'
     },
     {
       type: 'work',
-      title: 'Financial Accountant',
-      institution: 'Commercial Trading Co.',
-      date: '2023 - 2024',
-      desc: 'Managed financial records, prepared balance sheets, and handled daily accounting operations for a busy trading company.'
+      title: 'Applied AI',
+      institution: 'Hyperone',
+      date: 'Aug 2025 - Dec 2025',
+      desc: 'Applied AI and machine learning techniques using Python, including data preparation, model development, evaluation, and performance analysis.'
+    },
+    {
+      type: 'work',
+      title: 'Financial Analyst',
+      institution: 'Hyperone',
+      date: 'May 2025 - Aug 2025',
+      desc: 'Analyzed financial and operational data, prepared reports, and reviewed trends and variances to support business decisions.'
+    },
+    {
+      type: 'work',
+      title: 'Data Analyst',
+      institution: 'Hyperone',
+      date: 'Jan 2025 - Apr 2025',
+      desc: 'Collected, cleaned, and analyzed data; created Excel, SQL, and Power BI reports and dashboards to monitor KPIs.'
     },
     {
       type: 'edu',
-      title: 'Data Analytics & Applied AI',
-      institution: 'Self-Directed / Intensive Training',
-      date: '2024 - Present',
-      desc: 'Intensive focus on Python for Data Science, SQL optimization, and building Machine Learning models for business intelligence.'
+      title: 'Bachelor of Commerce (English Section)',
+      institution: 'Focus: Accounting, Statistics & Business Analysis',
+      date: 'Sep 2019 - Aug 2023',
+      desc: 'Built an analytical and business foundation for data-driven decision-making.'
     }
   ];
 

@@ -81,3 +81,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.hero-title-cursor {
+  border-right: 2px solid currentColor;
+  padding-right: 0.12em;
+  animation: hero-title-cursor-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hero-title-cursor-blink {
+  to {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-cursor {
+    animation: none;
+  }
+}

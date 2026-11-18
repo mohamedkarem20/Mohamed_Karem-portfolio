@@ -2,24 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Database, FileSpreadsheet, BarChart3,
-  Brain, Bot, Sigma, Search, BookOpen,
-  Cpu, Globe, Terminal, Briefcase
+  Brain, Bot, Search, Cpu, Globe, Terminal
 } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
-    { name: 'Excel (Advanced)', icon: <FileSpreadsheet size={20} />, color: 'bg-green-500/10 text-green-500 border-green-500/20' },
+    { name: 'Microsoft Excel', icon: <FileSpreadsheet size={20} />, color: 'bg-green-500/10 text-green-500 border-green-500/20' },
     { name: 'Python', icon: <Terminal size={20} />, color: 'bg-blue-500/10 text-blue-500 border-blue-500/20' },
-    { name: 'SQL', icon: <Database size={20} />, color: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20' },
+    { name: 'SQL / T-SQL', icon: <Database size={20} />, color: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20' },
     { name: 'Power BI', icon: <BarChart3 size={20} />, color: 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20' },
     { name: 'Tableau', icon: <Globe size={20} />, color: 'bg-orange-500/10 text-orange-500 border-orange-500/20' },
-    { name: 'DeepLearning.AI', icon: <Cpu size={20} />, color: 'bg-red-500/10 text-red-500 border-red-500/20' },
-    { name: 'AI Tools', icon: <Brain size={20} />, color: 'bg-indigo-500/10 text-indigo-500 border-indigo-500/20' },
-    { name: 'Agentic AI', icon: <Bot size={20} />, color: 'bg-fuchsia-500/10 text-fuchsia-500 border-fuchsia-500/20' },
-    { name: 'Statistics', icon: <Sigma size={20} />, color: 'bg-teal-500/10 text-teal-500 border-teal-500/20' },
-    { name: 'Data Mining', icon: <Search size={20} />, color: 'bg-purple-500/10 text-purple-500 border-purple-500/20' },
-    { name: 'Foundations: Data', icon: <BookOpen size={20} />, color: 'bg-sky-500/10 text-sky-500 border-sky-500/20' },
-    { name: 'Accounting', icon: <Briefcase size={20} />, color: 'bg-slate-500/10 text-slate-500 border-slate-500/20' },
+    { name: 'Machine Learning', icon: <Brain size={20} />, color: 'bg-indigo-500/10 text-indigo-500 border-indigo-500/20' },
+    { name: 'Deep Learning', icon: <Cpu size={20} />, color: 'bg-red-500/10 text-red-500 border-red-500/20' },
+    { name: 'Generative AI', icon: <Bot size={20} />, color: 'bg-fuchsia-500/10 text-fuchsia-500 border-fuchsia-500/20' },
+    { name: 'RAG / LLM Applications', icon: <Search size={20} />, color: 'bg-purple-500/10 text-purple-500 border-purple-500/20' },
+    { name: 'Computer Vision', icon: <Cpu size={20} />, color: 'bg-sky-500/10 text-sky-500 border-sky-500/20' },
+    { name: 'NLP', icon: <Globe size={20} />, color: 'bg-teal-500/10 text-teal-500 border-teal-500/20' },
+    { name: 'SQL Server', icon: <Database size={20} />, color: 'bg-slate-500/10 text-slate-500 border-slate-500/20' },
+    { name: 'Data Mining & Visualization', icon: <BarChart3 size={20} />, color: 'bg-orange-500/10 text-orange-500 border-orange-500/20' },
   ];
 
   return (
